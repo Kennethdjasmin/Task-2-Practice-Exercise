@@ -2,7 +2,7 @@
 Day 2 – HTML &amp; Structure
 
 ## Preview
-![Screenshot of my portfolio](Screenshot.png)
+[Screenshot of my portfolio](Screenshot.png)
 
 ## Live Demo
 Live link here:
