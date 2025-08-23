@@ -6,7 +6,7 @@ Day 2 – HTML &amp; Structure
 
 ## Live Demo
 Live link here:
-[GitHub Pages Link](https://kennethdjasmin.github.io/Task-2-Practice-Exercise/profile.html)
+[GitHub Page Demo](https://kennethdjasmin.github.io/Task-2-Practice-Exercise/profile.html)
 
 
 
