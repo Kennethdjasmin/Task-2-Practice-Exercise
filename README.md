@@ -11,7 +11,7 @@ Day 3 Result:
 
 ## Live Demo
 Live link here:
-[GitHub Page Demo](https://kennethdjasmin.github.io/Task-2-Practice-Exercise/profile.html)
+[GitHub Page Demo](https://kennethdjasmin.github.io/Task-2-Practice-Exercise/index.html)
 
 
 
