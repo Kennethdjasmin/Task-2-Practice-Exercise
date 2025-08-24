@@ -8,6 +8,19 @@ Day 2 Result:
 
 Day 3 Result:
 
+Desktop:
+![Screenshot of my portfolio](Screenshot.png)
+
+Mobile:
+![Screenshot of my portfolio](Screenshot.png)
+
+![Screenshot of my portfolio](Screenshot.png)
+
+![Screenshot of my portfolio](Screenshot.png)
+
+![Screenshot of my portfolio](Screenshot.png)
+
+
 
 ## Live Demo
 Live link here:
