@@ -11,13 +11,20 @@
     <header>
       <div class="navbar">
         <h3 class="brand">KSD</h3>
+        
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
         <div class="nav-links">
           <nav>
             <ul>
-              <li><a href="#home">HOME</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#portfolio">FOLIO</a></li>
-              <li><a href="#contact">CONTACT</a></li>
+              <li><a href="#home">home</a></li>
+              <li><a href="#about">about</a></li>
+              <li><a href="#portfolio">folio</a></li>
+              <li><a href="#contact">contact</a></li>
             </ul>
           </nav>
         </div>
@@ -79,6 +86,15 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
       feather.replace();
+      
+      // I need this part for the dropdown menu in mobile even tho its js
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('open');
+      });
     </script>
   </body>
 </html>
