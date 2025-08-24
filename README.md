@@ -1,5 +1,5 @@
 # Portfolio (Assignment Day 2-4)
-Day 2 – HTML &amp; Structure
+Day 2 – HTML &amp; Structure<br>
 Day 3 - CSS Implementation
 
 ## Preview
