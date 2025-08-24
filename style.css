@@ -23,6 +23,7 @@ h1, h2, h3 {
 
 section {
   padding: 100px 0;
+  scroll-margin-top: 50px;
 }
 
 .container {
@@ -218,7 +219,7 @@ nav a:hover {
 
 /* FORM FOR CONTACT ME */
 #contact .container {
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
