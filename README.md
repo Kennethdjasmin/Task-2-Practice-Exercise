@@ -9,11 +9,11 @@ Day 3 - CSS Implementation
 **Day 3 Result:**
 
 * Desktop:
-![Screenshot of my portfolio](Screenshot.png)
+![Screenshot of my portfolio](Screenshot_03.png)
 
 * Mobile: <br>
     - *Home Page*
-![Screenshot of my portfolio](Screenshot_20250825_033050.jpg)
+![Screenshot of my portfolio](Screenshot_02.png)
 
     - *Dropdown Menu*
 ![Screenshot of my portfolio](Screenshot_20250825_033055.jpg)
