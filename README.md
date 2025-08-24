@@ -8,10 +8,10 @@ Day 3 - CSS Implementation
 
 ### Day 3 Result:
 
-#### Desktop:
+**Desktop**:
 ![Screenshot of my portfolio](Screenshot.png)
 
-#### Mobile:<br>
+**Mobile:** <br>
 *Home Page*
 ![Screenshot of my portfolio](Screenshot_20250825_033050.jpg)
 
