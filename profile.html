@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
   </head>
   <body>
@@ -13,10 +14,10 @@
         <div class="nav-links">
           <nav>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#portfolio">Folio</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#home">HOME</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#portfolio">FOLIO</a></li>
+              <li><a href="#contact">CONTACT</a></li>
             </ul>
           </nav>
         </div>
@@ -26,19 +27,22 @@
     <section id="home">
       <div class="container">
         <h1>My Portfolio</h1>
-        <p>The stars are your limit.</p>
+        <p>The stars are your limit</p>
       </div>
     </section>
 
     <section id="about">
       <div class="container">
         <h2>About Me</h2>
-        <img src="https://media.tenor.com/_FnyVS4cvO4AAAAi/shiba-eye.gif" width="100">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim aliquam sem, in sollicitudin sem. Aliquam sed ex sed enim accumsan viverra sit amet ac sem. Proin ac turpis ut est imperdiet facilisis. Fusce eleifend orci eu venenatis consectetur. Phasellus porta faucibus euismod. Donec accumsan nulla condimentum aliquam tempus. Ut a ultricies lorem. Etiam consectetur erat vel augue dictum pretium. Nullam convallis efficitur turpis vel lacinia. Sed aliquam quis quam quis faucibus. Nulla varius in arcu eu faucibus. Nulla at libero ut turpis luctus aliquet. Praesent accumsan dictum pellentesque. Aenean metus ante, dapibus a elit sed, accumsan mattis quam.
-        </p>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim aliquam sem, in sollicitudin sem. Aliquam sed ex sed enim accumsan viverra sit amet ac sem. Proin ac turpis ut est imperdiet facilisis. Fusce eleifend orci eu venenatis consectetur. Phasellus porta faucibus euismod.
+          </p>
+          <img src="https://media.tenor.com/_FnyVS4cvO4AAAAi/shiba-eye.gif">
+        </div>
       </div>
     </section>
+
 
     <section id="portfolio">
       <div class="container">
@@ -55,18 +59,26 @@
       <div class="container">
         <h2>Contact Me</h2>
         <form>
-          <label for="name">Name:</label><br>
-          <input type="text" id="name" name="name" required><br><br>
-
-          <label for="email">Email:</label><br>
-          <input type="email" id="email" name="email" required><br><br>
-
-          <label for="message">Message:</label><br>
-          <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
+          <input type="text" id="name" name="name" placeholder="Johnny Depp" required>
+          <input type="email" id="email" name="email" placeholder="Johnny.Depp@gmail.com" required>
+          <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
           <button type="submit">Send</button>
         </form>
       </div>
     </section>
+    
+    <section id="socials">
+      <div class="social-container">
+        <a href="#"><i data-feather="mail"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="linkedin"></i></a>
+        <a href="#"><i data-feather="code"></i></a>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
