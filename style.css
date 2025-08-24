@@ -181,7 +181,7 @@ nav a:hover {
 }
 
 #portfolio .container {
-  min-height: 80vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -394,7 +394,7 @@ button:hover {
   /* CONTACT ME FORM */
   form {
     width: 100%;
-    max-width: 90%;
+    max-width: 70%;
   }
 
   input, textarea {
