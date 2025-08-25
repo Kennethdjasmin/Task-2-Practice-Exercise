@@ -3,6 +3,10 @@ Day 2 – HTML &amp; Structure<br>
 Day 3 - CSS Implementation<br>
 Day 4 - JS Addons
 
+## Live Demo
+Live link here:
+[GitHub Page Demo](https://kennethdjasmin.github.io/Task-2-Practice-Exercise/index.html)
+
 ## Preview
 **Day 2 Result:**
 ![Screenshot of my portfolio](ss/Screenshot.png)
@@ -42,10 +46,6 @@ Day 4 - JS Addons
 
   - Contact Me Page
 ![Screenshot of my portfolio](ss/Screenshot_07.png)
-
-## Live Demo
-Live link here:
-[GitHub Page Demo](https://kennethdjasmin.github.io/Task-2-Practice-Exercise/index.html)
 
 
 
