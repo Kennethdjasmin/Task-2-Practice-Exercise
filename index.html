@@ -112,9 +112,9 @@
     <script>
       feather.replace();
 
-      // === Hamburger menu toggle ===
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
+      
       hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         hamburger.classList.toggle('open');
@@ -131,17 +131,12 @@
         const card = carousel.querySelector('.card');
         if (!card) return;
 
-        // fix padding so first/last card can center
-        const cardWidth = card.offsetWidth;
-        carousel.style.paddingLeft = (carousel.offsetWidth / 2 - cardWidth / 2) + "px";
-        carousel.style.paddingRight = (carousel.offsetWidth / 2 - cardWidth / 2) + "px";
-
         let isDown = false;
         let startX;
         let scrollLeft;
 
         carousel.addEventListener("pointerdown", (e) => {
-          if (e.pointerType === "mouse") return;
+          // if (e.pointerType === "mouse") return;
           isDown = true;
           startX = e.pageX - carousel.offsetLeft;
           scrollLeft = carousel.scrollLeft;
@@ -156,41 +151,6 @@
           const x = e.pageX - carousel.offsetLeft;
           const walk = (x - startX);
           carousel.scrollLeft = scrollLeft - walk;
-        });
-      }
-
-        carousel.addEventListener('pointerup', finishDrag);
-        carousel.addEventListener('pointercancel', finishDrag);
-        carousel.addEventListener('pointerleave', finishDrag);
-
-        function finishDrag(e) {
-          if (!dragging) return;
-          dragging = false;
-          carousel.classList.remove('is-dragging');
-          try { if (e && e.pointerId) carousel.releasePointerCapture(e.pointerId); } catch (err) {}
-          // snapping auto-handled by CSS
-        }
-
-        // --- Fallback touch events (in case pointer events unsupported) ---
-        carousel.addEventListener('touchstart', (e) => {
-          if (dragging) return;
-          dragging = true;
-          startX = e.touches[0].clientX;
-          startLeft = carousel.scrollLeft;
-          carousel.classList.add('is-dragging');
-        }, { passive: true });
-
-        carousel.addEventListener('touchmove', (e) => {
-          if (!dragging) return;
-          const dx = e.touches[0].clientX - startX;
-          carousel.scrollLeft = startLeft - dx;
-        }, { passive: true });
-
-        carousel.addEventListener('touchend', () => {
-          if (!dragging) return;
-          dragging = false;
-          carousel.classList.remove('is-dragging');
-          // snapping auto-handled by CSS
         });
       }
     </script>
