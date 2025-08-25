@@ -19,19 +19,6 @@ Day 4 - JS Animation Addons
 
 * Desktop:
   - Home Page
-![Screenshot of my portfolio](ss/Screenshot_04.png)
-
-  - About Me Page
-![Screenshot of my portfolio](ss/Screenshot_05.png)
-
-  - Previous Work Page
-![Screenshot of my portfolio](ss/Screenshot_06.png)
-
-  - Contact Me Page
-![Screenshot of my portfolio](ss/Screenshot_07.png)
-
-* Mobile:
-  - Home Page
 ![Screenshot of my portfolio](ss/Screenshot_08.png)
 
   - About Me Page
@@ -42,6 +29,19 @@ Day 4 - JS Animation Addons
 
   - Contact Me Page
 ![Screenshot of my portfolio](ss/Screenshot_11.png)
+
+* Mobile:
+  - Home Page
+![Screenshot of my portfolio](ss/Screenshot_04.png)
+
+  - About Me Page
+![Screenshot of my portfolio](ss/Screenshot_05.png)
+
+  - Previous Work Page
+![Screenshot of my portfolio](ss/Screenshot_06.png)
+
+  - Contact Me Page
+![Screenshot of my portfolio](ss/Screenshot_07.png)
 
 ## Live Demo
 Live link here:
