@@ -562,9 +562,6 @@ button:hover {
   /* PORTFOLIO */
 	.carousel {
 		margin: 20px;
-		padding-inline: 20px;
-		scroll-padding-left: 20px;
-		scroll-padding-right: 20px;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
 		-webkit-overflow-scrolling: touch;
@@ -572,6 +569,8 @@ button:hover {
 		touch-action: pan-x, pan-y;
 		scrollbar-width: none;
 		-ms-overflow-style: none;
+    padding-inline: calc(50% - 125px);
+    scroll-padding-inline: calc(50% - 125px);
 	}
 
 	.card {
