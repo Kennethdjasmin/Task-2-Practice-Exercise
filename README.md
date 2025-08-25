@@ -1,7 +1,7 @@
 ## Portfolio (Assignment Day 2-4)
 Day 2 – HTML &amp; Structure<br>
 Day 3 - CSS Implementation<br>
-Day 4 - JS Animation Addons
+Day 4 - JS Addons
 
 ## Preview
 **Day 2 Result:**
