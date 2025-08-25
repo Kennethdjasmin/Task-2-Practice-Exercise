@@ -5,23 +5,43 @@ Day 4 - JS Animation Addons
 
 ## Preview
 **Day 2 Result:**
-![Screenshot of my portfolio](Screenshot.png)
+![Screenshot of my portfolio](ss/Screenshot.png)
 
 **Day 3 Result:**
 
 * Desktop:
-![Screenshot of my portfolio](Screenshot_03.png)
+![Screenshot of my portfolio](ss/Screenshot_03.png)
 
 * Mobile:
-![Screenshot of my portfolio](Screenshot_02.png)
+![Screenshot of my portfolio](ss/Screenshot_02.png)
 
 **Day 4 Result:**
 
 * Desktop:
-![Screenshot of my portfolio]()
+  - Home Page
+![Screenshot of my portfolio](ss/Screenshot_04.png)
+
+  - About Me Page
+![Screenshot of my portfolio](ss/Screenshot_05.png)
+
+  - Previous Work Page
+![Screenshot of my portfolio](ss/Screenshot_06.png)
+
+  - Contact Me Page
+![Screenshot of my portfolio](ss/Screenshot_07.png)
 
 * Mobile:
-![Screenshot of my portfolio]()
+  - Home Page
+![Screenshot of my portfolio](ss/Screenshot_08.png)
+
+  - About Me Page
+![Screenshot of my portfolio](ss/Screenshot_09.png)
+
+  - Previous Work Page
+![Screenshot of my portfolio](ss/Screenshot_10.png)
+
+  - Contact Me Page
+![Screenshot of my portfolio](ss/Screenshot_11.png)
 
 ## Live Demo
 Live link here:
