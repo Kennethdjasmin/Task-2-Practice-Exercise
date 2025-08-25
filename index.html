@@ -32,7 +32,11 @@
     </header>
 
     <section id="home">
-      <div class="container">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
+
+      <div class="home-content">
         <h1>My Portfolio</h1>
         <p>The stars are your limit</p>
       </div>
@@ -43,7 +47,7 @@
         <h2>About Me</h2>
         <div class="content">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim aliquam sem, in sollicitudin sem. Aliquam sed ex sed enim accumsan viverra sit amet ac sem. Proin ac turpis ut est imperdiet facilisis. Fusce eleifend orci eu venenatis consectetur. Phasellus porta faucibus euismod.
+            Hi, I'm Kenneth, currently a student at binus university and pursuing computer science major. I am just one of the many people in the world, like you, who is trying to do their best in life. A senior of mine used to tell me "money isn't everything, but everything needs money. Even if you end up spending your whole life bind to it, once in a while you need to remember to ask yourself `Am I working to live or am I living to work?`".
           </p>
           <img src="https://media.tenor.com/_FnyVS4cvO4AAAAi/shiba-eye.gif">
         </div>
@@ -112,6 +116,9 @@
     <script>
       feather.replace();
 
+      
+      
+      // Mobile Dropdown Menu
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
       
@@ -120,7 +127,9 @@
         hamburger.classList.toggle('open');
       });
 
-      // === Mobile-only draggable carousel ===
+      
+      
+      // Mobile Version Carousel
       const mq = window.matchMedia('(max-width: 768px)');
       if (mq.matches) initMobileCarousel();
 
@@ -136,7 +145,6 @@
         let scrollLeft;
 
         carousel.addEventListener("pointerdown", (e) => {
-          // if (e.pointerType === "mouse") return;
           isDown = true;
           startX = e.pageX - carousel.offsetLeft;
           scrollLeft = carousel.scrollLeft;
@@ -153,6 +161,86 @@
           carousel.scrollLeft = scrollLeft - walk;
         });
       }
+      
+      
+      
+      // Stars Particle Random location
+      function generateShadows(n) {
+        let shadows = [];
+        for (let i = 0; i < n; i++) {
+          let x = Math.floor(Math.random() * 2000);
+          let y = Math.floor(Math.random() * 2000);
+          shadows.push(`${x}px ${y}px #FFF`);
+        }
+        return shadows.join(", ");
+      }
+
+      document.documentElement.style.setProperty("--shadows-small", generateShadows(700));
+      document.documentElement.style.setProperty("--shadows-medium", generateShadows(200));
+      document.documentElement.style.setProperty("--shadows-big", generateShadows(100));
+      
+      
+      
+      // Navbar Change When at Top
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY === 0) {
+          header.classList.add("top");
+        } else {
+          header.classList.remove("top");
+        }
+      });
+
+      window.dispatchEvent(new Event("scroll"));
+      
+      
+      
+      // Home Page Text Animation
+      document.addEventListener("DOMContentLoaded", () => {
+        const homeContent = document.querySelector("#home .home-content");
+
+        setTimeout(() => {
+          homeContent.classList.add("visible");
+        }, 200);
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 100) {
+            homeContent.classList.remove("visible");
+            homeContent.classList.add("hidden");
+          } else {
+            homeContent.classList.remove("hidden");
+            homeContent.classList.add("visible");
+          }
+        });
+      });
+      
+      
+
+      // Fade in Effect for Each Section Except Home Page (Prob will change that later)
+      document.addEventListener("DOMContentLoaded", () => {
+        const fadeContainers = document.querySelectorAll("section .container");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                entry.target.classList.remove("hidden");
+              } else {
+                entry.target.classList.remove("visible");
+                entry.target.classList.add("hidden");
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        fadeContainers.forEach(el => {
+          if (el.closest("#home")) return;
+          el.classList.add("hidden");
+          observer.observe(el);
+        });
+      });
     </script>
   </body>
 </html>
