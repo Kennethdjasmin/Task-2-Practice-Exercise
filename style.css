@@ -447,7 +447,6 @@ button:hover {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     justify-content: flex-start;
-    scroll-behavior: smooth;
     touch-action: pan-x, pan-y;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -465,6 +464,7 @@ button:hover {
     scroll-snap-type: none;
   }
 
+  
   
   /* CONTACT ME FORM */
   form {
