@@ -1,6 +1,7 @@
 ## Portfolio (Assignment Day 2-4)
 Day 2 – HTML &amp; Structure<br>
-Day 3 - CSS Implementation
+Day 3 - CSS Implementation<br>
+Day 4 - JS Animation Addons
 
 ## Preview
 **Day 2 Result:**
@@ -14,8 +15,13 @@ Day 3 - CSS Implementation
 * Mobile:
 ![Screenshot of my portfolio](Screenshot_02.png)
 
+**Day 4 Result:**
 
+* Desktop:
+![Screenshot of my portfolio]()
 
+* Mobile:
+![Screenshot of my portfolio]()
 
 ## Live Demo
 Live link here:
