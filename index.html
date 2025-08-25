@@ -54,11 +54,36 @@
     <section id="portfolio">
       <div class="container">
         <h2>Previous Work</h2>
-        <ul>
-          <li><a href="project1.html">Project 1</a></li>
-          <li><a href="project2.html">Project 2</a></li>
-          <li><a href="project3.html">Project 3</a></li>
-        </ul>
+        <div class="carousel">
+          <div class="card">
+            <img src="https://i.pinimg.com/1200x/a9/cc/f5/a9ccf56101b8b38a891c877a6a6d554c.jpg">
+            <div class="card-content">
+              <h3>Zermatt</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/1200x/80/5c/d2/805cd24834d7de81e5fe28842df33300.jpg">
+            <div class="card-content">
+              <h3>Nueschwanstein</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/1200x/38/1e/71/381e714ee60f8c08d1a5b41d3a0b776f.jpg">
+            <div class="card-content">
+              <h3>Schweizerischer</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="https://i.pinimg.com/1200x/6c/bd/d6/6cbdd6af1b81bb2fab004116b81ced7f.jpg">
+            <div class="card-content">
+              <h3>Hallstatt</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -86,15 +111,88 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
       feather.replace();
-      
-      // I need this part for the dropdown menu in mobile even tho its js
+
+      // === Hamburger menu toggle ===
       const hamburger = document.querySelector('.hamburger');
       const navLinks = document.querySelector('.nav-links');
-
       hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
         hamburger.classList.toggle('open');
       });
+
+      // === Mobile-only draggable carousel ===
+      const mq = window.matchMedia('(max-width: 768px)');
+      if (mq.matches) initMobileCarousel();
+
+      function initMobileCarousel() {
+        const carousel = document.querySelector('.carousel');
+        if (!carousel) return;
+
+        const card = carousel.querySelector('.card');
+        if (!card) return;
+
+        // fix padding so first/last card can center
+        const cardWidth = card.offsetWidth;
+        carousel.style.paddingLeft = (carousel.offsetWidth / 2 - cardWidth / 2) + "px";
+        carousel.style.paddingRight = (carousel.offsetWidth / 2 - cardWidth / 2) + "px";
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener("pointerdown", (e) => {
+          if (e.pointerType === "mouse") return;
+          isDown = true;
+          startX = e.pageX - carousel.offsetLeft;
+          scrollLeft = carousel.scrollLeft;
+          carousel.classList.add("is-dragging");
+        });
+
+        carousel.addEventListener("pointerleave", () => { isDown = false; carousel.classList.remove("is-dragging"); });
+        carousel.addEventListener("pointerup", () => { isDown = false; carousel.classList.remove("is-dragging"); });
+        carousel.addEventListener("pointermove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - carousel.offsetLeft;
+          const walk = (x - startX);
+          carousel.scrollLeft = scrollLeft - walk;
+        });
+      }
+
+        carousel.addEventListener('pointerup', finishDrag);
+        carousel.addEventListener('pointercancel', finishDrag);
+        carousel.addEventListener('pointerleave', finishDrag);
+
+        function finishDrag(e) {
+          if (!dragging) return;
+          dragging = false;
+          carousel.classList.remove('is-dragging');
+          try { if (e && e.pointerId) carousel.releasePointerCapture(e.pointerId); } catch (err) {}
+          // snapping auto-handled by CSS
+        }
+
+        // --- Fallback touch events (in case pointer events unsupported) ---
+        carousel.addEventListener('touchstart', (e) => {
+          if (dragging) return;
+          dragging = true;
+          startX = e.touches[0].clientX;
+          startLeft = carousel.scrollLeft;
+          carousel.classList.add('is-dragging');
+        }, { passive: true });
+
+        carousel.addEventListener('touchmove', (e) => {
+          if (!dragging) return;
+          const dx = e.touches[0].clientX - startX;
+          carousel.scrollLeft = startLeft - dx;
+        }, { passive: true });
+
+        carousel.addEventListener('touchend', () => {
+          if (!dragging) return;
+          dragging = false;
+          carousel.classList.remove('is-dragging');
+          // snapping auto-handled by CSS
+        });
+      }
     </script>
   </body>
 </html>
