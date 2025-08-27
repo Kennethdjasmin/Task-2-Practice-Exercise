@@ -5,7 +5,7 @@ Day 4 - JS Addons
 
 ## Live Demo
 Live link here:
-[GitHub Page Demo](https://kennethdjasmin.github.io/Task-2-Practice-Exercise/index.html)
+[GitHub Page Demo](https://kennethdjasmin.github.io/Portfolio-Showcase/)
 
 ## Preview
 **Day 2 Result:**
